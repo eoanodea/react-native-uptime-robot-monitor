@@ -8,6 +8,10 @@ import {
   DrawerItems,
 } from 'react-navigation';
 
+import { Block, Icon, Text } from 'galio-framework';
+import theme from './src/theme';
+
+
 // screens
 import Article from './src/screens/Article';
 import ArticleCover from './src/screens/ArticleCover';
@@ -22,8 +26,6 @@ import Register from './src/screens/Register';
 import Registerv2 from './src/screens/Registerv2';
 import Grid from './src/screens/Grid';
 
-import theme from './src/theme';
-import { Block, Icon, Text } from 'galio-framework';
 
 const GalioDrawer = props => (
   <SafeAreaView style={styles.drawer} forceInset={{ top: 'always', horizontal: 'never' }}>
@@ -112,7 +114,6 @@ const screens = {
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
-  /*
   Dashboard: {
     screen: Dashboard,
     navigationOptions: {
@@ -120,7 +121,6 @@ const screens = {
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
-  */
   News: {
     screen: News,
     navigationOptions: {
@@ -135,7 +135,7 @@ const screens = {
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
-  /*
+  
   Presentation: {
     screen: Presentation,
     navigationOptions: {
@@ -171,7 +171,6 @@ const screens = {
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
-  */
 };
 
 const options = {

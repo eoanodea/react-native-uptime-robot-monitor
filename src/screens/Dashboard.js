@@ -122,19 +122,21 @@ class Dashboard extends React.Component {
 
     return (
       <Block row center card shadow space="between" style={styles.card} key={props.title}>
-        <Gradient
+        {/* <Gradient
           start={[0.45, 0.45]}
           end={[0.90, 0.90]}
           colors={gradientColors}
           style={[styles.gradient, styles.left]}
-        >
-          <Icon
-            size={BASE_SIZE}
-            name={props.icon}
-            color={COLOR_WHITE}
-            family={props.iconFamily}
-          />
-        </Gradient>
+        > */}
+        <Icon
+          size={BASE_SIZE}
+          // name={props.icon}
+          name="list-bullet"
+          color={COLOR_WHITE}
+          family="font-awesome"
+          // family={props.iconFamily}
+        />
+        {/* </Gradient> */}
 
         <Block flex>
           <Text size={BASE_SIZE * 1.125}>{props.title}</Text>
