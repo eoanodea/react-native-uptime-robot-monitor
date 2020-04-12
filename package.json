@@ -34,6 +34,7 @@
     "expo-constants": "^7.0.0",
     "expo-linear-gradient": "~7.0.0",
     "galio-framework": "^0.6.3",
+    "path": "^0.12.7",
     "react": "16.8.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
     "react-native-dotenv": "^0.2.0",
@@ -42,6 +43,8 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.0",
+    "babel-preset-expo": "^8.1.0",
+    "babel-preset-react-native": "^4.0.1",
     "d3-shape": "^1.2.2",
     "eslint": "^5.6.0",
     "eslint-config-airbnb": "^17.1.0",

@@ -1,8 +1,10 @@
-import { UPTIME_ROBOT_KEY } from 'react-native-dotenv';
+import getEnvVars from '../../environment';
+
+const { uptimeRobotKey } = getEnvVars();
 
 const objToForm = () => {
   const details = {
-    api_key: UPTIME_ROBOT_KEY,
+    api_key: uptimeRobotKey,
     format: 'json',
   };
 

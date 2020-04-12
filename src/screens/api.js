@@ -34,7 +34,7 @@ const getMonitors = async () => {
   }
 };
 
-export default { 
+export default {
   getAccount,
   getMonitors,
 };
