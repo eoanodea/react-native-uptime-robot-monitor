@@ -65,7 +65,7 @@ const cards = [
   },
 ];
 
-export default class Cards extends React.Component {
+export default class Monitors extends React.Component {
   render() {
     const { navigation } = this.props;
     return (

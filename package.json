@@ -5,12 +5,11 @@
   "files": [
     "src/*.js",
     "src/helpers/*.js",
-    "assets/fonts/galio.json",
-    "assets/fonts/galio.ttf"
+    "assets/fonts/MaterialIcons.ttf"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/galio-org/galio-starter-kit.git"
+    "url": "https://github.com/eoanodea/react-native-uptime-robot-monitor.git"
   },
   "author": "Eoan O'Dea",
   "license": "MIT",
@@ -37,6 +36,7 @@
     "galio-framework": "^0.6.3",
     "react": "16.8.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
+    "react-native-dotenv": "^0.2.0",
     "react-native-svg": "^9.12.0",
     "react-native-vector-icons": "^6.0.2"
   },

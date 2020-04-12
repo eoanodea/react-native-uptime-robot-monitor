@@ -15,7 +15,7 @@ import theme from './src/theme';
 // screens
 import Article from './src/screens/Article';
 import ArticleCover from './src/screens/ArticleCover';
-import Cards from './src/screens/Cards';
+import Monitors from './src/screens/Monitors';
 import Components from './src/screens/Components';
 import Login from './src/screens/Login';
 import News from './src/screens/News';
@@ -30,10 +30,15 @@ import Grid from './src/screens/Grid';
 const GalioDrawer = props => (
   <SafeAreaView style={styles.drawer} forceInset={{ top: 'always', horizontal: 'never' }}>
     <Block space="between" row style={styles.header}>
-      <Block flex={0.3}><Image source={{ uri: 'http://i.pravatar.cc/100' }} style={styles.avatar} /></Block>
+      <Block flex={0.3}><Image source={{ uri: 'https://i0.wp.com/wspace.ie/wp-content/uploads/2019/03/favicon-white.png' }} style={styles.avatar} /></Block>
       <Block flex style={styles.middle}>
-        <Text size={theme.SIZES.FONT * 0.875}>Galio Framework</Text>
-        <Text muted size={theme.SIZES.FONT * 0.875}>React Native</Text>
+        <Text
+          style={{ color: theme.COLORS.WHITE }} 
+          size={theme.SIZES.FONT * 0.875}
+        >
+          Uptime Monitor
+        </Text>
+        <Text muted size={theme.SIZES.FONT * 0.875}>WebSpace</Text>
       </Block>
     </Block>
     <ScrollView>
@@ -45,6 +50,7 @@ const GalioDrawer = props => (
 const styles = StyleSheet.create({
   drawer: {
     flex: 1,
+    backgroundColor: theme.COLORS.BLACK,
   },
   header: {
     paddingHorizontal: theme.SIZES.BASE,
@@ -86,6 +92,20 @@ MenuIcon.propTypes = {
 };
 
 const screens = {
+  Dashboard: {
+    screen: Dashboard,
+    navigationOptions: {
+      drawerLabel: 'Home',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
+  Cards: {
+    screen: Monitors,
+    navigationOptions: {
+      drawerLabel: 'Monitors',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
   Home: {
     screen: Components,
     navigationOptions: {
@@ -93,13 +113,7 @@ const screens = {
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
-  Cards: {
-    screen: Cards,
-    navigationOptions: {
-      drawerLabel: 'Cards',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
+
   Article: {
     screen: Article,
     navigationOptions: {
@@ -111,13 +125,6 @@ const screens = {
     screen: ArticleCover,
     navigationOptions: {
       drawerLabel: 'Article Cover',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
-  Dashboard: {
-    screen: Dashboard,
-    navigationOptions: {
-      drawerLabel: 'Dashboard screen',
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },

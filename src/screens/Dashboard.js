@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  StyleSheet, ScrollView, Platform,
+  StyleSheet, ScrollView, Platform, TouchableOpacity,
 } from 'react-native';
 import { LinearGradient as Gradient } from 'expo';
 import { Defs, LinearGradient, Stop } from 'react-native-svg';
@@ -56,14 +56,15 @@ class Dashboard extends React.Component {
       title="Dashboard"
       onLeftPress={() => this.props.navigation.openDrawer()}
       leftIconColor={theme.COLORS.MUTED}
-      right={(
-        <Button
-          color="transparent"
-          style={styles.settings}
-          onPress={() => this.props.navigation.openDrawer()}
-        >
-          <Icon size={BASE_SIZE} name="heart" family="font-awesome" color={theme.COLORS.MUTED} />
-        </Button>
+      left={(
+        <TouchableOpacity onPress={() => this.props.navigation.openDrawer()}>
+          <Icon
+            name="menu"
+            family="feather"
+            size={theme.SIZES.BASE * 1.5}
+            color={theme.COLORS.ICON}
+          />
+        </TouchableOpacity>
       )}
       style={Platform.OS === 'android' ? { marginTop: theme.SIZES.BASE } : null}
     />
@@ -118,32 +119,22 @@ class Dashboard extends React.Component {
   }
 
   renderCard = (props, index) => {
-    const gradientColors = index % 2 ? GRADIENT_BLUE : GRADIENT_PINK;
-
     return (
       <Block row center card shadow space="between" style={styles.card} key={props.title}>
-        {/* <Gradient
-          start={[0.45, 0.45]}
-          end={[0.90, 0.90]}
-          colors={gradientColors}
-          style={[styles.gradient, styles.left]}
-        > */}
-        <Icon
-          size={BASE_SIZE}
-          // name={props.icon}
-          name="list-bullet"
-          color={COLOR_WHITE}
-          family="font-awesome"
-          // family={props.iconFamily}
-        />
-        {/* </Gradient> */}
-
+        <Block style={styles.cardIcon}>
+          <Icon
+            size={BASE_SIZE * 1.5}
+            name="dashboard"
+            color={theme.COLORS.PRIMARY}
+            family="MaterialIcons"
+          />
+        </Block>
         <Block flex>
           <Text size={BASE_SIZE * 1.125}>{props.title}</Text>
           <Text size={BASE_SIZE * 0.875} muted>{props.subtitle}</Text>
         </Block>
         <Button style={styles.right}>
-          <Icon size={BASE_SIZE} name="minimal-right" family="Galio" color={COLOR_GREY} />
+          <Icon size={BASE_SIZE} name="keyboard-arrow-right" family="MaterialIcons" color={COLOR_GREY} />
         </Button>
       </Block>
     );
@@ -156,12 +147,11 @@ class Dashboard extends React.Component {
       <Block safe flex>
         {/* header */}
         {this.renderHeader()}
-
-        {/* stats */}
-        {this.renderStats()}
-
-        {/* cards */}
         <ScrollView style={{ flex: 1 }}>
+          {/* stats */}
+          {this.renderStats()}
+
+          {/* cards */}
           {this.renderCards()}
         </ScrollView>
       </Block>
@@ -177,6 +167,9 @@ const styles = StyleSheet.create({
     padding: BASE_SIZE,
     backgroundColor: COLOR_WHITE,
     shadowOpacity: 0.40,
+  },
+  cardIcon: {
+    paddingRight: BASE_SIZE,
   },
   menu: {
     width: BASE_SIZE * 2,
