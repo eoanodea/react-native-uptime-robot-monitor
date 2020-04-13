@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "galio-native-kit",
-    "description": "Build amazing apps in one codebase. //wip from sdk30 to sdk33",
-    "slug": "galio-native-kit",
+    "name": "react-native-uptime-robot-monitor",
+    "description": "A react native application which fetches data from uptime robot using galio",
+    "slug": "uptime-robot-monitor",
     "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
@@ -26,6 +26,6 @@
     "ios": {
       "supportsTablet": true
     },
-    "githubUrl": "https://github.com/galio-org/galio"
+    "githubUrl": "https://github.com/eoanodea/react-native-uptime-robot-monitor.git"
   }
 }
