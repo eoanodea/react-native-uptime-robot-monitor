@@ -15,7 +15,7 @@ import theme from './src/theme';
 // screens
 import Article from './src/screens/Article';
 import ArticleCover from './src/screens/ArticleCover';
-import Monitors from './src/screens/Monitors';
+import ListMonitors from './src/screens/Monitors/ListMonitors';
 import Components from './src/screens/Components';
 import Login from './src/screens/Login';
 import News from './src/screens/News';
@@ -100,7 +100,7 @@ const screens = {
     },
   },
   Cards: {
-    screen: Monitors,
+    screen: ListMonitors,
     navigationOptions: {
       drawerLabel: 'Monitors',
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,

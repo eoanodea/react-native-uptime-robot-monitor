@@ -1,4 +1,4 @@
-import objToForm from '../helpers/urlencodedConverter';
+import objToForm from '../../helpers/urlencodedConverter';
 
 const baseUrl = 'https://api.uptimerobot.com/v2/';
 
